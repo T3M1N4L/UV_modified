@@ -25,8 +25,8 @@
     },
     {
       "title": "Discord",
-      "source": "https://discord.com",
-      "icon": "/assets/discord.svg",
+      "source": "https://discord.com/channels/@me",
+      "icon": "/assets/dis-cord.svg",
       "desc": "A popular social platform for chatting",
       "type": "default",
       "id": "4"
@@ -40,10 +40,10 @@
       "id": "6"
     },
     {
-      "title": "Mathway",
-      "source": "https://www.mathway.com",
-      "icon": "/assets/Mathway.png",
-      "desc": "Your #1 digital helper for math",
+      "title": "Github",
+      "source": "https://www.github.com",
+      "icon": "/assets/github.png",
+      "desc": "Your repos :)",
       "type": "default",
       "id": "7"
     },
