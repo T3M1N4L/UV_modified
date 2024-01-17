@@ -169,16 +169,22 @@ self.__uv$config = {
    * @param {URL} url - The URL for the rewrite function.
    * @returns {string} - The script to inject.
    */
-  inject: async (url) => {
+   
+inject: async (url) => {
     if (url.host === "discord.com") {
       return `
             <script src="https://raw.githubusercontent.com/Vencord/builds/main/browser.js" data-q="vencord"></script>
             <link rel="stylesheet" href="https://raw.githubusercontent.com/Vencord/builds/main/browser.css" data-q="vencord">
+            <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+            <script>eruda.init();</script>
           `;
     }
-    return ``;
+    return `
+         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+         <script>eruda.init();</script>
+     `;
   },
-
+  
   /**
    * Middleware function for handling requests.
    * @type {function}
@@ -200,7 +206,7 @@ self.__uv$config = {
       /\b.*rule34.*\b/.test(url.host) ||
       /^(.*\.)?bestporncomix\.com$/.test(url.host)
     ) {
-      console.log("MATCHED PORN");
+      console.log("MATCHED P0RN");
       return new Response("This domain has been Blocked by emerald", {});
     }
     if (
