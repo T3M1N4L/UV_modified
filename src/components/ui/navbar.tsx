@@ -77,7 +77,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.document.title =
-      settingsStore.title.length > 0 ? settingsStore.title : "Emerald";
+      settingsStore.title.length > 0 ? settingsStore.title : "UV_modified";
     window.document
       .querySelector("link[rel='icon']")
       ?.setAttribute(
@@ -141,7 +141,7 @@ const Navbar = () => {
             });
           location.reload();
           toast("Bare server connection successful", {
-            description: "All checks passed. Your ready to use emerald",
+            description: "All checks passed. Your ready to use UV_modified",
           });
         } else {
           toast("Bare server connection failed", {
@@ -194,16 +194,10 @@ const Navbar = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
-            <img className="h-6 w-6" alt="Emerald" src="/emerald.png" />
-            <span className="text-card-foreground">Emerald</span>
+            <img className="h-6 w-6" alt="UV_modified" src="/emerald.png" />
+            <span className="text-card-foreground"><strong>UV_modified</strong></span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
-            <a
-              href="/games"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Games
-            </a>
             <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
               <SheetTrigger>
                 {" "}
@@ -337,14 +331,6 @@ const Navbar = () => {
                 </div>
               </SheetContent>
             </Sheet>
-
-            <a
-              href="https://discord.gg/KGBHgamMgY"
-              target="_blank"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Discord
-            </a>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-between space-x-4 md:justify-end">
@@ -384,7 +370,7 @@ const Navbar = () => {
                     <h1 className="text-card-foreground">Settings</h1>
                   </DialogTitle>
                   <DialogDescription>
-                    Settings to change the behavior of Emerald.
+                    Settings to change the behavior of UV_modified.
                   </DialogDescription>
                 </DialogHeader>
                 <Separator />
