@@ -21,9 +21,9 @@ export const useSettingsStore = create<SettingsState>()(
   persist(
     (set, _get) => ({
         proxy: "uv",
-        search: "https://www.google.com/search?q=",
+        search: "https://duckduckgo.com/?q=",
         cloak: "none",
-        title: "Emerald",
+        title: "UV_modified",
         icon: "/emerald.png",
         setTitle: (str) => set(() => ({ title: str })),
         setIcon: (str) => set(() => ({ icon: str })),
