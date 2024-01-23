@@ -24,7 +24,7 @@ export const useSettingsStore = create<SettingsState>()(
         search: "https://duckduckgo.com/?q=",
         cloak: "none",
         title: "UV_modified",
-        icon: "/emerald.png",
+        icon: "/uv.png",
         setTitle: (str) => set(() => ({ title: str })),
         setIcon: (str) => set(() => ({ icon: str })),
         setCloak: (str) => set(() => ({ cloak: str })),
