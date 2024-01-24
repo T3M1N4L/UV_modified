@@ -176,12 +176,26 @@ inject: async (url) => {
             <script src="https://raw.githubusercontent.com/Vencord/builds/main/browser.js" data-q="vencord"></script>
             <link rel="stylesheet" href="https://raw.githubusercontent.com/Vencord/builds/main/browser.css" data-q="vencord">
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-            <script>eruda.init();</script>
+              <script>
+            eruda.init({
+                      defaults: {
+                        displaySize: 45,
+                        theme: "Material Deep Ocean"
+                      }
+                    });
+            </script>
           `;
     }
     return `
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-         <script>eruda.init();</script>
+           <script>
+            eruda.init({
+                      defaults: {
+                        displaySize: 45,
+                        theme: "Material Deep Ocean"
+                      }
+                    });
+            </script>
      `;
   },
   
