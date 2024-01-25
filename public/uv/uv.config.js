@@ -221,7 +221,7 @@ inject: async (url) => {
       /^(.*\.)?bestporncomix\.com$/.test(url.host)
     ) {
       console.log("MATCHED P0RN");
-      return new Response("This domain has been Blocked by emerald", {});
+      return new Response("This domain has been blocked by emerald", {});
     }
     if (
       url.pathname.includes("ads.js") ||
