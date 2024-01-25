@@ -1,6 +1,6 @@
 # Emerald v5 (UV_modified)
 
-> The 5th iteration of the emerald proxy (but without SEO and cooler theme ig?) (another test)
+> The 5th iteration of the emerald proxy (but without SEO and cooler theme ig?) 
 
 ## Installation
 
@@ -17,3 +17,6 @@ Note You need to also run the bare server on whatever port you want just make su
 - [IllusionTBA](https://github.com/illusionTBA) Founder
 - [T3RM1N4L](https://github.com/t3m1n4l) Made the theme (and added inspect)
 - Special thanks to [MotorTruck1221](https://github.com/MotorTruck1221) for the bare switcher code
+
+# Logs (you don't need to read this)
+`Vscode.dev` - test fo-sho
