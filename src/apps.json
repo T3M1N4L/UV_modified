@@ -43,7 +43,7 @@
       "title": "Github",
       "source": "https://www.github.com",
       "icon": "/assets/github.png",
-      "desc": "Your repos :)",
+      "desc": "Upload your code in repositoryies",
       "type": "default",
       "id": "7"
     },
