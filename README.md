@@ -1,6 +1,6 @@
 # Emerald v5 (UV_modified)
 
-> The 5th iteration of the emerald proxy (but without SEO and cooler theme ig?) (anoter test)
+> The 5th iteration of the emerald proxy (but without SEO and cooler theme ig?) (another test)
 
 ## Installation
 
