@@ -26,7 +26,7 @@
     {
       "title": "Discord",
       "source": "https://discord.com/channels/@me",
-      "icon": "/assets/dis-cord.svg",
+      "icon": "/assets/dis-cord.png",
       "desc": "A popular social platform for chatting",
       "type": "default",
       "id": "4"
