@@ -48,18 +48,18 @@
       "id": "7"
     },
     {
-      "title": "Goku.sx",
-      "source": "https://goku.sx/",
-      "icon": "/assets/goku.png",
-      "desc": "Watch movies and shows for free",
+      "title": "Vscode",
+      "source": "https://vscode.dev/",
+      "icon": "/assets/vscode.png",
+      "desc": "A simplistic code editor online",
       "type": "default",
       "id": "8"
     },
     {
-      "title": "Aniwatch.to",
-      "source": "https://aniwatch.to",
-      "icon": "/assets/aniwatch.png",
-      "desc": "watch anime for free",
+      "title": "Speedrun",
+      "source": "https://speedrun.com",
+      "icon": "/assets/speedrun.png",
+      "desc": "Admire the latest speedruns",
       "type": "default",
       "id": "9"
     },
@@ -72,12 +72,20 @@
       "id": "10"
     },
     {
-      "title": "Phantom Games",
-      "source": "https://phantom.delusionz.xyz/",
-      "icon": "/assets/phantom.png",
-      "desc": "The best game platform to play all the classics",
+      "title": "Anix.to",
+      "source": "https://anix.to",
+      "icon": "/assets/anix.png",
+      "desc": "The main free anime provider's UI", 
       "type": "default",
       "id": "11"
+    },
+    {
+      "title": "Radon Games",
+      "source": "https://radon.games/",
+      "icon": "/assets/radon.png",
+      "desc": "The best game platform to play all the classics",
+      "type": "default",
+      "id": "12"
     }
   ]
   
