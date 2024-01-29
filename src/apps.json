@@ -82,7 +82,7 @@
     {
       "title": "Radon Games",
       "source": "https://radon.games/",
-      "icon": "/assets/radon.png",
+      "icon": "/assets/radon.svg",
       "desc": "The best game platform to play all the classics",
       "type": "default",
       "id": "12"
