@@ -21,8 +21,8 @@ export default function App() {
         `<iframe style="height:100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; border: none"  src="` +
         window.location.href +
         `"></iframe>`;
-      page!.document.head.innerHTML += `<link rel="icon" href="${document.querySelector('https://uv-modified.vercel.app/uv.png').value}">`;
-      page!.document.title = document.querySelector("UV_modified").value;
+      page!.document.head.innerHTML = `<link rel="icon" href="https://uv-modified.vercel.app/uv.png">`;
+      page!.document.title = "UV_modified";
       window.location.replace("https://google.com");
     }
   }, [settingsStore.cloak]);
