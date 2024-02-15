@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ServerCog, Trash2 } from "lucide-react";
+import { ScanText, Trash2 } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -354,7 +354,7 @@ const Navbar = () => {
                 <Tooltip>
                   <TooltipTrigger>
                     <button className="bg-card p-2 rounded-md transition-colors hover:text-foreground/80 text-foreground/60 shadow-lg hover:shadow-card ">
-                      <ServerCog />
+                      <ScanText />
                     </button>
                   </TooltipTrigger>
                   <TooltipContent className="border-none ">
