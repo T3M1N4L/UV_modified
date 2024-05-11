@@ -177,7 +177,6 @@ inject: async (url) => {
       return `
             <script src="https://raw.githubusercontent.com/Vencord/builds/main/browser.js" data-q="vencord"></script>
             <link rel="stylesheet" href="https://raw.githubusercontent.com/Vencord/builds/main/browser.css" data-q="vencord">
-            <link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/T3M1N4L/main/theme.css" data-q="AMOLEDCOMFY">
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
               <script>
             eruda.init({
