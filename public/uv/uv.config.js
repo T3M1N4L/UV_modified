@@ -175,7 +175,7 @@ self.__uv$config = {
 inject: async (url) => {
     if (url.host === "discord.com") {
       return `
-            <script src="https://raw.githubusercontent.com/Vencord/builds/main/browser.js" data-q="vencord"></script>
+            <script src="https://raw.githubusercontent.com/Vencord/builds/a556ad77fecaf4120be83e3373b3a83604912980/browser.js" data-q="vencord"></script>
             <link rel="stylesheet" href="https://raw.githubusercontent.com/Vencord/builds/main/browser.css" data-q="vencord">
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
               <script>
