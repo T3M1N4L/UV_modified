@@ -228,6 +228,7 @@ inject: async (url) => {
                     });
 
             (document.head).append('<link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css">');
+            console.log("Hello World")
 
             </script>
           `;
