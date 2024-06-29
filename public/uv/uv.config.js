@@ -104,6 +104,44 @@ const blocked = [
   "ads-api.twitter.com",
   "offerimage.com",
   "veepteero.com",
+  "analyticsengine.s3.amazonaws.com",
+  "pagead2.googleadservices.com",
+  "stats.g.doubleclick.net",
+  "ad.doubleclick.net",
+  "static.doubleclick.net",
+  "m.doubleclick.net",
+  "static.media.net",
+  "media.net",
+  "google-analytics.com", 
+  "ssl.google-analytics.com",
+  "adm.hotjar.com",
+  "script.hotjar.com",
+  "mouseflow.com",
+  "cdn.mouseflow.com",
+  "cdn-test.mouseflow.com",
+  "freshmarketer.com",
+  "claritybt.freshmarketer.com",
+  "stats.wp.com",
+  "luckyorange.com",
+  "api.luckyorange.com",
+  "cdn.luckyorange.com",
+  "w1.luckyorange.com",
+  "settings.luckyorange.net",
+  "notify.bugsnag.com",
+  "sessions.bugsnag.com",
+  "api.bugsnag.com",
+  "browser.sentry-cdn.com",
+  "ads.pinterest.com",
+  "analytics.pinterest.com",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+
 ];
 
 self.__uv$config = {
@@ -188,7 +226,7 @@ inject: async (url) => {
                       }
                     });
 
-            $(document.head).append('<link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css">');
+            (document.head).append('<link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css">');
 
             </script>
           `;
