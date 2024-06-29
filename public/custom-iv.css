@@ -1,0 +1,188 @@
+/* ==UserStyle==
+@name         Invidious modern CSS (pre alpha)
+@version      20230616.14.00
+@namespace    userstyles.world/user/nikko
+@description  Work in progress CSS for invidious
+@author       nikko
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("invidious") {
+  /* THUMBNAILS */
+  img.thumbnail {
+    border-radius: 10px;
+  }
+  
+  img.thumbnail:hover {
+    border-radius: 0px;
+    transition: 0.1s;
+    transform: scale(1.02);
+  }
+  
+  img.thumbnail:not(:hover) {
+    border-radius: 10px;
+    transition: 0.1s;
+  }
+  
+  div.watched-overlay:hover{
+      border-radius: 0px;
+      transform: scale(1.02);
+      transition: 0.1s;
+      background-color: transparent;
+  }
+  
+  div.watched-overlay:not(hover){
+      border-radius: 10px;
+      transition: 0.1s;
+  }
+  
+  div.thumbnail:hover img.thumbnail{
+      border-radius: 0px;
+      transform: scale(1.02);
+      transition: 0.1s;
+  }
+  div.thumbnail:hover div.watched-indicator{
+      background-color: #0f0f0f00;
+      transition: 0.1s;
+  }
+  div.thumbnail:not(hover) div.watched-indicator{
+      background-color: #f00;
+      transition: 0.1s;
+      height: 6px;
+      border-radius: 0 0 10px 10px;
+  }
+  
+  div.thumbnail:not(hover) img.thumbnail{
+      border-radius: 10px;
+      transition: 0.1s;
+  }
+  
+  body.dark-theme {
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+  }
+  
+  p.channel-name:not(hover) {
+    font-weight: bold;
+    color: #aaa;
+    transition: 0.1s;
+  }
+  
+  p.channel-name:hover {
+    color: #f1f1f1;
+      transition: 0.1s;
+  }
+  
+  
+  .length {
+    background-color: rgba(0, 0, 0, .86);
+    border-radius: 5px;
+    transform: scale(0.8);
+    padding: 0 3px 0 3px;
+  }
+  
+  
+  
+  /* SEARCHBAR */
+  .searchbar input[type="search"] {
+    width: 100%;
+    margin: 5px;
+    border: 1px solid;
+    border-color: rgb(45, 43, 43);
+    border-radius: 20px;
+    box-shadow: none;
+    transition: 0.1s;
+  }
+  .searchbar input[type="search"]:hover {
+    border-color: rgb(64, 64, 64);
+    transition: 0.1s;
+  }
+  .searchbar input[type="search"]:not(hover) {
+    border-color: rgb(45, 43, 43);
+    transition: 0.1s;
+  }
+      
+  .searchbar input[type="search"]:focus {
+    width: 100%;
+    margin: 5px;
+    border: 1px solid;
+    border-color: rgb(96, 96, 96);
+    border-radius: 20px;
+    box-shadow: none;
+    transition: 0.1s;
+  }
+  
+  
+  /* NAVBAR/BUTTONS */
+  .navbar a {
+    padding: 10px;
+    transform: scale(1.2);
+  }
+  .navbar .index-link {
+    font-weight: bold;
+    font-size: 19px;
+    display: inline;
+    padding: 0;
+  }
+  
+  .dark-theme div.feed-menu .feed-menu-item {
+    padding: .5em 1em;
+    font-size: 16px;
+      border: 1px solid;
+      border-radius: 10px;
+      border-color: #373737;
+      padding-inline: 20px;
+      background-color: #373737;
+  }
+  
+  .light-theme div.feed-menu .feed-menu-item {
+    padding: .5em 1em;
+    font-size: 16px;
+      border: 1px solid;
+      border-radius: 10px;
+      border-color: #fff;
+      padding-inline: 20px;
+      background-color: #fff;
+  }
+  
+  
+  .light-theme .pure-menu-heading {
+      color: #000
+  }
+  
+  div.feed-menu .feed-menu-item:hover {
+      background-color: #1f96d0;
+      transition: 0.2s;
+  }
+  div.feed-menu .feed-menu-item:not(hover) {
+      background-color: #373737;
+      transition: 0.2s;
+  }
+  .feed-menu {
+    padding-bottom:15px;
+    justify-content: space-evenly;
+    width:40%;
+      margin: 0 auto;
+      
+  }
+  
+  .dark-theme a:hover, .dark-theme a:active, .dark-theme summary:hover, .dark-theme a:focus, .dark-theme summary:focus {
+    color: rgb(255, 255, 255);
+  }
+  
+  .light-theme a:hover, .light-theme a:active, .light-theme summary:hover, .light-theme a:focus, .light-theme summary:focus {
+    color: #0f0f0f;
+  }
+  
+  
+  
+  /* INVIDIOUS LOGO */
+  .index-link.pure-menu-heading:hover {
+    color: #25b5fb;
+    transition: 0.5s;
+  }
+  .index-link.pure-menu-heading {
+    color: #1f96d0;
+    transition: 0.5s;
+  }
+  }

@@ -176,7 +176,7 @@ self.__uv$config = {
    */
    
 inject: async (url) => {
-    if (url.host === "discord.com") {
+    if (url.host === "inv.tux.pizza") {
       return `
             
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
@@ -187,12 +187,16 @@ inject: async (url) => {
                         theme: "Material Deep Ocean"
                       }
                     });
+
+            $(document.head).append('<link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css">');
+
             </script>
           `;
     }
     return `
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-           <script>
+         <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/mf-adblock.js"></script>  
+         <script>
             eruda.init({
                       defaults: {
                         displaySize: 45,
@@ -202,6 +206,7 @@ inject: async (url) => {
             </script>
      `;
   },
+  
   
   /**
    * Middleware function for handling requests.

@@ -9,7 +9,7 @@
     },
     {
       "title": "invidious",
-      "source": "https://vid.puffyan.us",
+      "source": "https://inv.tux.pizza/",
       "icon": "/assets/invidious.png",
       "desc": "Faster Youtube alternative",
       "type": "default",
