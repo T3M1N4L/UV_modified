@@ -218,6 +218,7 @@ inject: async (url) => {
       return `
             
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+            <link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css" data-q="vencord">
               <script>
             eruda.init({
                       defaults: {
