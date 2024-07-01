@@ -227,7 +227,7 @@ inject: async (url) => {
                       }
                     });
 
-            (document.head).append('<link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css">');
+            (document.head).append('<link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css">');
             console.log("Hello World")
 
             </script>
