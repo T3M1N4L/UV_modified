@@ -218,7 +218,7 @@ inject: async (url) => {
       return `
             
             <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-            <link rel="stylesheet" href="https://userstyles.world/api/style/10386.user.css" data-q="vencord">
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css" data-q="vencord">
               <script>
             eruda.init({
                       defaults: {
@@ -227,8 +227,9 @@ inject: async (url) => {
                       }
                     });
 
-            (document.head).append('<link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css">');
-            console.log("Hello World")
+            document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css">');
+
+            console.log("Hello World");
 
             </script>
           `;
