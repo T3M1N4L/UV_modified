@@ -456,7 +456,7 @@ const Navbar = () => {
                         <h2 className="text-card-foreground">Panic Key</h2>
                         <Input
                           className="max-w-[20rem] text-card-foreground placeholder:text-card-foreground/55"
-                          placeholder="example.com"
+                          placeholder="` , + , |"
                           value={settingsStore.panicKey}
                           onChange={(e) => settingsStore.setPKey(e.target.value)}
                         />
