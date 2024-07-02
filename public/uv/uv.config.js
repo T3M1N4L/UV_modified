@@ -226,12 +226,8 @@ inject: async (url) => {
                         theme: "Material Deep Ocean"
                       }
                     });
-
-            document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css">');
-
-            console.log("Hello World");
-
             </script>
+            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/inject-custom-iv.js"></script>
           `;
     }
     return `
