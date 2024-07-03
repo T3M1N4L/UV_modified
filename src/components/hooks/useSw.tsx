@@ -2,8 +2,6 @@ import { useEffect } from "react";
 // @ts-expect-error no types
 import { SetTransport } from "@mercuryworkshop/bare-mux";
 
-BareMux.SetTransport("EpxMod.EpoxyClient", { wisp: "wss://nebulaproxy.io/wisp/" });
-
 const useSw = (path: string) => {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
