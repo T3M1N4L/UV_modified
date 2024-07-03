@@ -92,7 +92,7 @@ const Navbar = () => {
         "href",
         settingsStore.icon.length > 0
           ? `https://www.google.com/s2/favicons?domain=${settingsStore.icon}`
-          : "/emerald.png"
+          : "/uv.png"
       );
   }, [settingsStore.title, settingsStore.icon]);
 
