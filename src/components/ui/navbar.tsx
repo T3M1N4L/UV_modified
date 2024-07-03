@@ -136,12 +136,6 @@ const Navbar = () => {
             <span className="text-card-foreground">UV_modified</span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
-            <a
-              href="/games"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Games
-            </a>
             <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
               <SheetTrigger>
                 {" "}
@@ -275,14 +269,6 @@ const Navbar = () => {
                 </div>
               </SheetContent>
             </Sheet>
-
-            <a
-              href="https://discord.gg/KGBHgamMgY"
-              target="_blank"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Discord
-            </a>
             <a 
             href={settingsStore.panicLink}
             className="transition-colors hover:text-foreground/80 text-foreground/60"
