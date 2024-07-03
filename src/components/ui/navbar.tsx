@@ -92,7 +92,7 @@ const Navbar = () => {
         "href",
         settingsStore.icon.length > 0
           ? `https://www.google.com/s2/favicons?domain=${settingsStore.icon}`
-          : "/uv.png"
+          : "/emerald.png"
       );
   }, [settingsStore.title, settingsStore.icon]);
 
@@ -132,7 +132,7 @@ const Navbar = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
-            <img className="h-6 w-6" alt="UV_modified" src="/uv.png" />
+            <img className="h-6 w-6" alt="UV_modified" src="/emerald.png" />
             <span className="text-card-foreground">UV_modified</span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
