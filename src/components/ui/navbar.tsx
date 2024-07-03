@@ -81,44 +81,20 @@ const Navbar = () => {
         window.location.href = settingsStore.panicLink;
     }
   });
+  
 
-
-        const testGet = await fetch(`${bareUrl.href}v3/`, {
-          headers: {
-            "x-bare-url": "https://www.google.com",
-            "X-Bare-Headers": `{"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"}`,
-          },
-        });
-        if (testGet.status === 200 || testGet.status === 302) {
-          console.log("SETTING BARE", bareUrl.href);
-          await idb.set("bare", bareUrl.href);
-
-          navigator.serviceWorker
-            .getRegistrations()
-            .then(function (registrations) {
-              for (const registration of registrations) {
-                registration.unregister();
-                console.log("Service Worker Unregistered");
-              }
-            });
-          location.reload();
-          toast("Bare server connection successful", {
-            description: "All checks passed. Your ready to use UV_modified",
-          });
-        } else {
-          toast("Bare server connection failed", {
-            description: "The bare server did not respond as expected",
-          });
-        }
-      })();
-    } catch (error) {
-      if (error instanceof Error) {
-        toast("Bare server connection failed", {
-          description: `Please check your Bare server address. Error: ${error.name}`,
-        });
-      }
-    }
-  };
+  useEffect(() => {
+    window.document.title =
+      settingsStore.title.length > 0 ? settingsStore.title : "UV_modified";
+    window.document
+      .querySelector("link[rel='icon']")
+      ?.setAttribute(
+        "href",
+        settingsStore.icon.length > 0
+          ? `https://www.google.com/s2/favicons?domain=${settingsStore.icon}`
+          : "/uv.png"
+      );
+  }, [settingsStore.title, settingsStore.icon]);
 
   const handleCreateApp = () => {
     if (appName.length === 0) {
@@ -156,10 +132,16 @@ const Navbar = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
-            <img className="h-6 w-6" alt="UV_modified" src="/emerald.png" />
-            <span className="text-card-foreground"><strong>UV_modified</strong></span>
+            <img className="h-6 w-6" alt="UV_modified" src="/uv.png" />
+            <span className="text-card-foreground">UV_modified</span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
+            <a
+              href="/games"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Games
+            </a>
             <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
               <SheetTrigger>
                 {" "}
@@ -293,7 +275,15 @@ const Navbar = () => {
                 </div>
               </SheetContent>
             </Sheet>
-                        <a 
+
+            <a
+              href="https://discord.gg/KGBHgamMgY"
+              target="_blank"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Discord
+            </a>
+            <a 
             href={settingsStore.panicLink}
             className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
@@ -407,7 +397,7 @@ const Navbar = () => {
                         <h2 className="text-card-foreground">Panic Key</h2>
                         <Input
                           className="max-w-[20rem] text-card-foreground placeholder:text-card-foreground/55"
-                          placeholder="` , + , |"
+                          placeholder="example.com"
                           value={settingsStore.panicKey}
                           onChange={(e) => settingsStore.setPKey(e.target.value)}
                         />
@@ -458,7 +448,7 @@ const Navbar = () => {
             <div className="flex space-x-4 items-center justify-between">
               <span className="text-card-foreground">App Url</span>
               <Input
-                placeholder="direct url to the website. e.g https://google.com"f
+                placeholder="direct url to the website. e.g https://google.com"
                 className="max-w-sm text-card-foreground/85"
                 value={appUrl}
                 onChange={(e) => setAppUrl(e.target.value)}
