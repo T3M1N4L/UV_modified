@@ -53,7 +53,6 @@ import {
   useProxiedStore,
   useSettingsStore,
 } from "@/components/stores";
-import { useIDB } from "../hooks";
 import { Input } from "./input";
 import { ProxySearch } from "@/lib/utils";
 import { useEffect, useState } from "react";
@@ -62,7 +61,6 @@ import { Button } from "./button";
 
 
 const Navbar = () => {
-  const idb = useIDB();
   const proxiedStore = useProxiedStore();
   const settingsStore = useSettingsStore();
   const appStore = useAppStore();
@@ -73,7 +71,6 @@ const Navbar = () => {
   const [value, setValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [creatingApp, setCreatingApp] = useState(false);
-  const [bare, setBare] = useState("");
   // const handleBare = () => {};
   // console.log(idbStore.bare);
   
@@ -85,52 +82,6 @@ const Navbar = () => {
     }
   });
 
-
-  useEffect(() => {
-    window.document.title =
-      settingsStore.title.length > 0 ? settingsStore.title : "UV_modified";
-    window.document
-      .querySelector("link[rel='icon']")
-      ?.setAttribute(
-        "href",
-        settingsStore.icon.length > 0
-          ? `https://www.google.com/s2/favicons?domain=${settingsStore.icon}`
-          : "/emerald.png"
-      );
-  }, [settingsStore.title, settingsStore.icon]);
-
-  useEffect(() => {
-    (async () => {
-      const bare = await idb.get("bare");
-      if (!bare) {
-        await idb.set("bare", "/bare/");
-      }
-    })();
-  }, []);
-
-  useEffect(() => {
-    (async () => {
-      setBare(((await idb.get("bare")) as string) ?? "");
-      console.log("SETTING BARE EFFECT", bare);
-    })();
-  }, []);
-
-  const handleBare = () => {
-    toast("Testing Bare connection", {
-      description: "Testing the bare server connection",
-    });
-    try {
-      (async () => {
-        const bareUrl = new URL(bare, location.href);
-        console.log("BARE URL", bareUrl.href);
-        const manifest = await fetch(`${bareUrl.href}`);
-        const mJson = await manifest.json();
-        if (!(mJson.versions as string[]).includes("v3")) {
-          return toast("Bare server connection failed", {
-            description:
-              "The bare manifest did not include v3 which is essential for this verson of ultraviolet to work",
-          });
-        }
 
         const testGet = await fetch(`${bareUrl.href}v3/`, {
           headers: {
@@ -466,27 +417,6 @@ const Navbar = () => {
                   {/* settings for bare */}
                   <div className="flex flex-col space-y-2">
                     <h1 className="text-card-foreground text-2xl">Misc.</h1>
-                    <div className="flex items-center justify-between">
-                      <h2 className="text-card-foreground">Bare</h2>
-                      <Input
-                        className="max-w-[20rem] text-card-foreground placeholder:text-card-foreground/55"
-                        placeholder="Change bare server"
-                        value={bare}
-                        onChange={(e) => setBare(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter") {
-                            if (
-                              (e.target as HTMLInputElement).value.length > 0
-                            ) {
-                              setBare("/bare/");
-                            } else {
-                              setBare((e.target as HTMLInputElement).value);
-                            }
-                            handleBare();
-                          }
-                        }}
-                      />
-                    </div>
                   </div>
                 </div>
               </div>

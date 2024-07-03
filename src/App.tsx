@@ -7,9 +7,13 @@ import { useSw } from "@/components/hooks";
 import Navbar from "./components/ui/navbar";
 import Home from "./pages/home";
 import { useEffect } from "react";
+
 export default function App() {
-  useSw("/sw.js", "/~/");
+  useSw("/sw.js");
+  console.log("app");
   const settingsStore = useSettingsStore();
+
+
   useEffect(() => {
     // console.log(window.location === window.parent.location);
     if (

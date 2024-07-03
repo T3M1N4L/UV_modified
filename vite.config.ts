@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
 import path from "path";
 const __dirname = path.resolve();
 // https://vitejs.dev/config/
@@ -10,13 +11,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: `${__dirname}/node_modules/localforage/dist/localforage.*.js`.replace(
-            /\\/g,
-            "/"
-          ),
-          dest: "localforage",
+          src: `${libcurlPath}/**/*`.replace(/\\/g, "/"),
+          dest: "libcurl",
           overwrite: false
-        }
+        },
       ]
     })
   ],
@@ -27,9 +25,9 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/bare/": {
-        target: "http://localhost:3000",
-        rewrite: (path) => path.replace(/^\/bare/, ''),
+      "/w/": {
+        target: "http://localhost:4000/",
+        rewrite: (path) => path.replace(/^\/w/, ''),
         ws: true
       },
     }
