@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// @ts-expect-error no types
 import { SetTransport } from "@mercuryworkshop/bare-mux";
 
 const useSw = (path: string) => {
