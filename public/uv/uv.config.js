@@ -133,14 +133,6 @@ const blocked = [
   "browser.sentry-cdn.com",
   "ads.pinterest.com",
   "analytics.pinterest.com",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
 
 ];
 
@@ -155,7 +147,7 @@ self.__uv$config = {
    * The bare path.
    * @type {string}
    */
-  bare: "/w/",
+  bare: "/bare/",
 
   /**
    * Function to encode URLs using Ultraviolet's XOR codec.
@@ -217,9 +209,8 @@ inject: async (url) => {
     if (url.host === "inv.tux.pizza") {
       return `
             
-            <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-            <link rel="stylesheet" href="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/custom-iv.css" data-q="vencord">
-              <script>
+            <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
+            <script>
             eruda.init({
                       defaults: {
                         displaySize: 45,
@@ -232,6 +223,7 @@ inject: async (url) => {
     }
     return `
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+         
          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/mf-adblock.js"></script>  
          <script>
             eruda.init({
