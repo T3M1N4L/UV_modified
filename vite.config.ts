@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
+import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
 import path from "path";
 const __dirname = path.resolve();
 // https://vitejs.dev/config/
@@ -11,8 +11,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: `${epoxyPath}/**/*`.replace(/\\/g, "/"),
-          dest: "epoxy",
+          src: `${libcurlPath}/**/*`.replace(/\\/g, "/"),
+          dest: "libcurl",
           overwrite: false
         },
       ]
