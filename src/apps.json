@@ -8,7 +8,7 @@
       "id": "1"
     },
     {
-      "title": "invidious",
+      "title": "Invidious",
       "source": "https://inv.tux.pizza/",
       "icon": "/assets/invidious.svg",
       "desc": "Faster Youtube alternative",
@@ -72,10 +72,10 @@
       "id": "10"
     },
     {
-      "title": "Anix.to",
-      "source": "https://anix.to",
-      "icon": "/assets/anix.png",
-      "desc": "The main free anime provider's UI", 
+      "title": "Hianime",
+      "source": "https://hianime.to",
+      "icon": "/assets/hianime.png",
+      "desc": "A popular free anime (pirated) streaming service", 
       "type": "default",
       "id": "11"
     },
