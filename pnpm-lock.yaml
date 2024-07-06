@@ -12,8 +12,8 @@ importers:
         specifier: ^1.1.1
         version: 1.1.4
       '@mercuryworkshop/epoxy-transport':
-        specifier: ^2.0.5
-        version: 2.0.5(typescript@5.5.3)
+        specifier: ^2.0.6
+        version: 2.0.6(typescript@5.5.3)
       '@mercuryworkshop/libcurl-transport':
         specifier: ^1.3.2
         version: 1.3.2(typescript@5.5.3)
@@ -364,8 +364,8 @@ packages:
   '@mercuryworkshop/epoxy-tls@2.0.3-4':
     resolution: {integrity: sha512-s4xsJ2x6V69liSFH9d8xqveCugxF+pDhbpETXDZbecIoUxFT9wY8tG/XuS89pqXIsyE8AM7OpCCk/Ce9U6Gw8Q==}
 
-  '@mercuryworkshop/epoxy-transport@2.0.5':
-    resolution: {integrity: sha512-JpWmJeHodDOZgnaMT4GBNhsKqritrmFLVGhHNYrjE3W+bKtnazJqGztiJv9cML6xKXlkriVhmupN9dQbKStC8Q==}
+  '@mercuryworkshop/epoxy-transport@2.0.6':
+    resolution: {integrity: sha512-LQJde8g4MFnkOySCNV8wdn8KFcAeZ7t8MskDyuyiBC65nnETl5N+51D5VFI4LE1MGFXTDOn0ArgUld8v92J2xg==}
 
   '@mercuryworkshop/libcurl-transport@1.3.2':
     resolution: {integrity: sha512-1KJZu1JxgqsEnH9oZumwgv4BsCRREJxXlEX43cmS7s8ittDeozoI3kLci8x2b3P1nn8B3Jy3+zDRA+iEzzEl/w==}
@@ -2356,7 +2356,7 @@ snapshots:
 
   '@mercuryworkshop/epoxy-tls@2.0.3-4': {}
 
-  '@mercuryworkshop/epoxy-transport@2.0.5(typescript@5.5.3)':
+  '@mercuryworkshop/epoxy-transport@2.0.6(typescript@5.5.3)':
     dependencies:
       '@mercuryworkshop/epoxy-tls': 2.0.3-4
       esbuild-plugin-umd-wrapper: 2.0.0
