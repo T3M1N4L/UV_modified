@@ -389,11 +389,6 @@ const Navbar = () => {
                         />
                       </div>
                     </div>
-                  <Separator />
-                  {/* settings for bare */}
-                  <div className="flex flex-col space-y-2">
-                    <h1 className="text-card-foreground text-2xl">Misc.</h1>
-                  </div>
                 </div>
               </div>
             </DialogContent>
