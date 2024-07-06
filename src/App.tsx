@@ -25,8 +25,8 @@ export default function App() {
         `<iframe style="height:100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; border: none"  src="` +
         window.location.href +
         `"></iframe>`;
-      page!.document.head.innerHTML = `<link rel="icon" href="https://uv-modified.vercel.app/uv.png">`;
-      page!.document.title = "UV_modified";
+      page!.document.head.innerHTML = `<link rel="icon" href="./google.png">`;
+      page!.document.title = "Google";
       window.location.replace("https://google.com");
     }
   }, [settingsStore.cloak]);
