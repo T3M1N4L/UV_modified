@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@mercuryworkshop/bare-mux':
-        specifier: ^1.1.1
+        specifier: ^1.1.4
         version: 1.1.4
       '@mercuryworkshop/epoxy-transport':
         specifier: ^2.0.6
