@@ -10,7 +10,7 @@
     {
       "title": "invidious",
       "source": "https://inv.tux.pizza/",
-      "icon": "/assets/invidious.png",
+      "icon": "/assets/invidious.svg",
       "desc": "Faster Youtube alternative",
       "type": "default",
       "id": "2"
