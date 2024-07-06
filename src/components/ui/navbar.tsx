@@ -133,7 +133,7 @@ const Navbar = () => {
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
             <img className="h-6 w-6" alt="UV_modified" src="/emerald.png" />
-            <span className="text-card-foreground">UV_modified</span>
+            <span className="text-card-foreground"><strong>UV_modified</strong></span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
             <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
