@@ -5,7 +5,7 @@ const useSw = (path: string) => {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(() => {
-        SetTransport("CurlMod.libcurlClient", { wisp: "wss://nebulaproxy.io/wisp/"});
+        SetTransport("CurlMod.LibcurlClient", { wisp: "wss://nebulaproxy.io/wisp/" });
       })
       navigator.serviceWorker
       .register(path)
