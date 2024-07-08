@@ -41,7 +41,7 @@
     },
     {
       "title": "ChatGPT",
-      "source": "https://reddit.com",
+      "source": "https://chatgpt.com",
       "icon": "/assets/chatgpt.png",
       "desc": "The most popular text based AI",
       "type": "default",
