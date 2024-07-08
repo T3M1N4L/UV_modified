@@ -225,7 +225,6 @@ inject: async (url) => {
     return `
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
          
-         <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/mf-adblock.js"></script>  
          <script>
             eruda.init({
                       defaults: {
