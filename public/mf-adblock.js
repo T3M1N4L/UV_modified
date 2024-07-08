@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         mf-adblock
+// @name         Adblock f-er
 // @namespace    none
-// @version      0.7
+// @version      0.9
 // @description  A basic anti-adblock workaround that can remove or click elements on a website
-// @author       DerFichtl, with major improvements by Firepup650
+// @author       many
 // @match        https://*/*
 // @icon         https://getadblock.com/favicon.ico
 // @grant        none
@@ -443,3 +443,94 @@
     protectCore();
  
 })();
+
+ 
+(function(window) {
+    var debug = false;
+ 
+    var fuzzAdBlock = function(options) {
+        if(options !== undefined)
+            this.setOption(options);
+ 
+        var self = this;
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                if(self._options.checkOnLoad === true)
+                    self.check(false);
+            }, 1);
+        }, false);
+ 
+        // hotfix
+        var self = this;
+        this.debug = {
+            set: function(x){ debug = !!x; return self;},
+            get: function(){ return debug; }
+        }
+    }
+ 
+    fuzzAdBlock.prototype = {
+        setOption : function(options, value) {
+            if(value !== undefined) {
+                var key = options;
+                options = {};
+                options[key] = value;
+            }
+ 
+            for(option in options)
+                this._options[option] = options[option];
+ 
+            return this;
+        },
+ 
+        _options : {
+            checkOnLoad:    true,
+            resetOnEnd:     true,
+        },
+ 
+        _var : {
+            triggers: []
+        },
+ 
+        check : function(ignore) {
+            this.emitEvent(false);
+            return true;
+        },
+ 
+        clearEvent : function() {
+            this._var.triggers = [];
+        },
+ 
+        emitEvent : function(detected) {
+            if(detected === false) {
+                var fns = this._var.triggers;
+                for (var i = 0; i < fns.length; i += 1) {
+                    if (fns[i] instanceof Function) { fns[i](); }
+                }
+                if(this._options.resetOnEnd === true)
+                    this.clearEvent();
+            }
+            return this;
+        },
+ 
+        on : function(detected, fn) {
+            if(detected === false)
+                this._var.triggers.push(fn);
+            return this;
+        },
+ 
+        onDetected : function(fn) {
+            return this;
+        },
+ 
+        onNotDetected : function(fn) {
+            return this.on(false, fn);
+        }
+    };
+ 
+    var fuzz = new fuzzAdBlock();
+    for (var field in fuzz) {
+        Object.defineProperty(fuzz, field, {value: fuzz[field], configurable: false});
+    }
+    Object.defineProperties(window, {fuzzAdBlock : { value: fuzz, enumerable: true, writable: false }});
+    Object.defineProperties(window, {blockAdBlock : { value: fuzz, enumerable: true, writable: false }});
+})(window);
