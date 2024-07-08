@@ -133,6 +133,7 @@ const blocked = [
   "browser.sentry-cdn.com",
   "ads.pinterest.com",
   "analytics.pinterest.com",
+  "tools.mouseflow.com",
 
 ];
 
