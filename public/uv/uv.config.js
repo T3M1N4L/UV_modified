@@ -207,6 +207,21 @@ self.__uv$config = {
    */
    
 inject: async (url) => {
+  if (url.host === "chatgpt.com") {
+    return `
+          
+          <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
+          <script>
+          eruda.init({
+                    defaults: {
+                      displaySize: 45,
+                      theme: "Material Deep Ocean"
+                    }
+                  });
+          </script>
+          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/inject-custom-gpt.js"></script>
+        `;
+  }
     if (url.host === "inv.tux.pizza") {
       return `
             
