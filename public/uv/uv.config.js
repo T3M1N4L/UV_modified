@@ -219,7 +219,7 @@ inject: async (url) => {
                     }
                   });
           </script>
-          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/inject-custom-gpt.js"></script>
+          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/chatgpt.js"></script>
         `;
   }
     if (url.host === "inv.tux.pizza") {
@@ -234,7 +234,7 @@ inject: async (url) => {
                       }
                     });
             </script>
-            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/inject-custom-iv.js"></script>
+            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/invidious.js"></script>
           `;
     }
     return `

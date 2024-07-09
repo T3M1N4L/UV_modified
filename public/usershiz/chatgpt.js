@@ -1,6 +1,6 @@
 var styles = `
    /* cyrillic-ext */
-  @import url('https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/atom-one-dark.min.css');
+  @import url('https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css');
   @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
@@ -321,6 +321,36 @@ var styles = `
   html {
     --accent-1: #9768ff;
     --accent-2: #39ffad;
+    scroll-behavior: smooth;
+    scrollbar-face-color: #040404;
+    scrollbar-base-color: #040404;
+    scrollbar-3dlight-color: #040404;
+    scrollbar-highlight-color: #040404;
+    scrollbar-track-color: #000;
+    scrollbar-arrow-color: #000;
+    scrollbar-shadow-color: #040404;
+    scrollbar-dark-shadow-color: #040404;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #060606;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #000;
+  }
+  ::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #060606;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: #060606;
+  }
+  ::-webkit-resizer {
+    background-color: #060606;
   }
   .dark,
   html.ZnJ1aXRqdWljZQ.dark {
