@@ -58,7 +58,7 @@
     {
       "title": "Hacker News",
       "source": "https://news.ycombinator.com/",
-      "icon": "/assets/news.svg",
+      "icon": "/assets/news.png",
       "desc": "A news article website made for devs",
       "type": "default",
       "id": "9"
