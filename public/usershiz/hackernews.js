@@ -238,8 +238,8 @@ var styles = `
         padding: 0.5rem 1rem;
     }
     img[src="y18.svg"]{
-   filter: saturate(5) grayscale(1) contrast(10);
-        border-radius:5px;
+        filter: saturate(5) grayscale(1) contrast(10) !important;
+        border-radius:5px !important;
 
     }
 
