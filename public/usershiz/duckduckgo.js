@@ -1,30 +1,68 @@
 var styles = `
 ::-webkit-scrollbar,
-  .legacy-homepage_socialIcons__obCva.social-menu_button__2_gkB,
   .DrcPyihFGyKMlg6lpwsa.fmNE5tkVXayTmN_LsM5d::before,
   .XvPRmQVeIoCP5lQhICTv.ofDl_1VxUG_EKc3b9E3x::before,
+  .zcm__link.dropdown__button.js-dropdown-button {
+    display: none;
+  }
   #ads,
   .js-sidebar-ads,
   .results--ads,
-  .results--ads--rrail,
-  [data-layout="ad"],
-  .footer,
-  #bottom_spacing2,
-  .tag-home__wrapper,
-  .serp__bottom-right.js-serp-bottom-right,
-  .footer__right,
-  .footer__left,
-  .feedback-prompt,
-  .badge-link__wrap.js-badge-main-msg,
-  .badge-link.badge-link--serp.ddg-extension-hide.js-badge-link.atb-new.english,
-  .js-footer-feedback-btn-wrap,
-  .footer__text.js-footer-tagline,
-  .footer__links,
-  .legacy-homepage-variants_belowTheFoldWrapper__7_DL2,
-  .legacy-homepage_ctaSection__5siuM.legacy-homepage-variants_ctaSection__Pr8MN,
-  #__next-route-announcer__,
-  #menu-button--menu,
-  .zcm__link.dropdown__button.js-dropdown-button {
+  .results--ads--rrail {
+    display: none;
+  }
+  [data-layout="ad"] {
+    display: none !important;
+  }
+  .footer {
+    display: none !important;
+  }
+  #bottom_spacing2 {
+    display: none !important;
+  }
+  .tag-home__wrapper {
+    display: none;
+  }
+  .serp__bottom-right.js-serp-bottom-right {
+    display: none;
+  }
+  .footer__right {
+    display: none;
+  }
+  .footer__left {
+    display: none;
+  }
+  .feedback-prompt {
+    display: none;
+  }
+  .badge-link__wrap.js-badge-main-msg {
+    display: none;
+  }
+  .badge-link.badge-link--serp.ddg-extension-hide.js-badge-link.atb-new.english {
+    display: none;
+  }
+  .js-footer-feedback-btn-wrap {
+    display: none;
+  }
+  .footer__text.js-footer-tagline {
+    display: none;
+  }
+  .footer__links {
+    display: none;
+  }
+  .legacy-homepage-variants_belowTheFoldWrapper__7_DL2 {
+    display: none;
+  }
+  .legacy-homepage_ctaSection__5siuM.legacy-homepage-variants_ctaSection__Pr8MN {
+    display: none;
+  }
+  #__next-route-announcer__ {
+    display: none;
+  }
+  #menu-button--menu {
+    display: none;
+  }
+  .legacy-homepage_socialIcons__obCva.social-menu_button__2_gkB {
     display: none;
   }
   .header__logo {
