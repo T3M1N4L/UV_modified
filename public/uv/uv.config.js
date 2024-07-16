@@ -215,7 +215,7 @@ inject: async (url) => {
           eruda.init({
                     defaults: {
                       displaySize: 45,
-                      theme: "Material Deep Ocean"
+                      theme: "AMOLED"
                     }
                   });
           </script>
@@ -231,7 +231,7 @@ inject: async (url) => {
           eruda.init({
                     defaults: {
                       displaySize: 45,
-                      theme: "Material Deep Ocean"
+                      theme: "AMOLED"
                     }
                   });
           </script>
@@ -246,7 +246,7 @@ inject: async (url) => {
           eruda.init({
                     defaults: {
                       displaySize: 45,
-                      theme: "Material Deep Ocean"
+                      theme: "AMOLED"
                     }
                   });
           </script>
@@ -261,7 +261,7 @@ inject: async (url) => {
             eruda.init({
                       defaults: {
                         displaySize: 45,
-                        theme: "Material Deep Ocean"
+                        theme: "AMOLED"
                       }
                     });
             </script>
@@ -275,7 +275,7 @@ inject: async (url) => {
             eruda.init({
                       defaults: {
                         displaySize: 45,
-                        theme: "Material Deep Ocean"
+                        theme: "AMOLED"
                       }
                     });
             </script>
