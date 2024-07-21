@@ -210,7 +210,7 @@ inject: async (url) => {
   if (url.host === "duckduckgo.com") {
     return `
           
-          <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
+          <script src="https://cdn.jsdelivr.net/npm/eruda"></script> 
           <script>
           eruda.init({
                     defaults: {
@@ -226,7 +226,7 @@ inject: async (url) => {
   if (url.host === "news.ycombinator.com") {
     return `
           
-          <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
+          <script src="https://cdn.jsdelivr.net/npm/eruda"></script> 
           <script>
           eruda.init({
                     defaults: {
@@ -238,25 +238,10 @@ inject: async (url) => {
           <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/hackernews.js"></script>
         `;
   }
-  if (url.host === "chatgpt.com") {
-    return `
-          
-          <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
-          <script>
-          eruda.init({
-                    defaults: {
-                      displaySize: 45,
-                      theme: "AMOLED"
-                    }
-                  });
-          </script>
-          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/chatgpt.js"></script>
-        `;
-  }
-    if (url.host === "inv.tux.pizza") {
+    if (url.host === "yewtu.be") {
       return `
             
-            <script src="//cdn.jsdelivr.net/npm/eruda"></script> 
+            <script src="https://cdn.jsdelivr.net/npm/eruda"></script> 
             <script>
             eruda.init({
                       defaults: {
@@ -269,7 +254,7 @@ inject: async (url) => {
           `;
     }
     return `
-         <script src="//cdn.jsdelivr.net/npm/eruda"></script>      
+         <script src="https://cdn.jsdelivr.net/npm/eruda"></script>      
          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/mf-adblock.js"></script>  
          <script>
             eruda.init({

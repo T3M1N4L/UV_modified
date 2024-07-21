@@ -9,7 +9,7 @@
     },
     {
       "title": "Invidious",
-      "source": "https://inv.tux.pizza/",
+      "source": "https://yewtu.be/",
       "icon": "/assets/invidious.svg",
       "desc": "Faster Youtube alternative",
       "type": "default",
