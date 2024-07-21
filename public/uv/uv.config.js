@@ -223,7 +223,7 @@ inject: async (url) => {
            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/mf-adblock.js"></script>  
         `;
   }
-  if (url.host === "news.ycombinator.com") {
+  if (url.host === "yewtu.be") {
     return `
           
           <script src="https://cdn.jsdelivr.net/npm/eruda"></script> 
@@ -235,10 +235,10 @@ inject: async (url) => {
                     }
                   });
           </script>
-          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/hackernews.js"></script>
+          <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/invidious.js"></script>
         `;
   }
-    if (url.host === "yewtu.be") {
+    if (url.host === "news.ycombinator.com") {
       return `
             
             <script src="https://cdn.jsdelivr.net/npm/eruda"></script> 
@@ -250,7 +250,7 @@ inject: async (url) => {
                       }
                     });
             </script>
-            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/invidious.js"></script>
+            <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/hackernews.js"></script>
           `;
     }
     return `
