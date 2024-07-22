@@ -37,7 +37,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['express'],
+      external: ['express', '@mercuryworkshop/libcurl-transport'],
     },
   },
 })
