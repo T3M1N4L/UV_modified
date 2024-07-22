@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import SetTransport from "@mercuryworkshop/bare-mux;
+import SetTransport from "@mercuryworkshop/bare-mux";
 
 const useSw = (path: string) => {
   useEffect(() => {
