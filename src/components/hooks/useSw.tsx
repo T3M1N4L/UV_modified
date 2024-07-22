@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
-import { Express } from "express"; // <--- Fix here
-const app = new Express(); // <--- Fix here
+import express from "express"; // <--- Fix here
+const app = express(); // <--- Fix here
 
-app.use("/libcurl/", Express.static(libcurlPath));
-app.use("/baremux/", Express.static(baremuxPath));
+app.use("/libcurl/", express.static(libcurlPath));
+app.use("/baremux/", express.static(baremuxPath));
 import { BareMuxConnection } from "@mercuryworkshop/bare-mux"
 let connection = new BareMuxConnection("/baremux/worker.js")
 await connection.setTransport("/libcurl/index.mjs", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
