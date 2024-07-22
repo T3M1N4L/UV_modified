@@ -8,7 +8,7 @@ const app = express();
 const useSw = (path: string) => {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then(() => {
+      navigator.serviceWorker.ready.then(async () => {
          
             app.use("/libcurl/", express.static(libcurlPath));
             app.use("/baremux/", express.static(baremuxPath));
