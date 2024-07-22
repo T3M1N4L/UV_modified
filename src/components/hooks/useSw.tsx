@@ -7,12 +7,13 @@ app.use("/libcurl/", express.static(libcurlPath));
 app.use("/baremux/", express.static(baremuxPath));
 import { BareMuxConnection } from "@mercuryworkshop/bare-mux"
 let connection = new BareMuxConnection("/baremux/worker.js")
+await connection.setTransport("/libcurl/index.mjs", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
 
 const useSw = (path: string) => {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(() => {
-        await connection.setTransport("/libcurl/index.mjs", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
+        
       })
       navigator.serviceWorker
       .register(path)
