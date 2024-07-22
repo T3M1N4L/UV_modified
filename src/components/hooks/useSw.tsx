@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
-import express from "express";
+import { express } from "express";
 const app = express();
 
 
