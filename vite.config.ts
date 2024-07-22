@@ -1,11 +1,9 @@
-import * as path from 'path';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
-
+import path from "path";
 const __dirname = path.resolve();
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -33,11 +31,5 @@ export default defineConfig({
         ws: true
       },
     }
-  },
-  build: {
-    target: 'esnext',
-    rollupOptions: {
-      external: ['express'],
-    },
-  },
+  }
 })

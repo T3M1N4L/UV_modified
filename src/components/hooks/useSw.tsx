@@ -1,25 +1,15 @@
 import { useEffect } from "react";
-import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
-import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
-import { BareMuxConnection } from "@mercuryworkshop/bare-mux";
-import express from "express"; 
-const app = express(); 
+import { SetTransport } from "@mercuryworkshop/bare-mux";
 
 const useSw = (path: string) => {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then(async () => {
-         
-            app.use("/libcurl/", express.static(libcurlPath));
-            app.use("/baremux/", express.static(baremuxPath));
-
-            let connection = new BareMuxConnection("/baremux/worker.js")
-            await connection.setTransport("/libcurl/index.mjs", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
-
+      navigator.serviceWorker.ready.then(() => {
+        SetTransport("CurlMod.LibcurlClient", { wisp: "wss://nebulaproxy.io/wisp/" });
       })
       navigator.serviceWorker
-     .register(path)
-       .then(
+      .register(path)
+        .then(
           function (registration) {
             console.log(
               `[sw] ${path} successfuly registered with a scope of ${registration.scope}`
