@@ -39,3 +39,31 @@ font-family: 'Fira Code', sans-serif;
 body {
   @apply bg-black
 }
+#gallery,
+.item,
+.blured-bg,
+.blured-bg > img {
+  min-width: 300px;
+  width: 50vw;
+}
+
+#gallery {
+  position: relative;
+}
+
+.blured-bg {
+  filter: blur(13px);
+}
+
+
+.item {
+  padding: 5px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item > img {
+  width: 100%;
+}
