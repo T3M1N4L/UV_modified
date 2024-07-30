@@ -85,7 +85,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.document.title =
-      settingsStore.title.length > 0 ? settingsStore.title : "UV_modified";
+      settingsStore.title.length > 0 ? settingsStore.title : "Underneath";
     window.document
       .querySelector("link[rel='icon']")
       ?.setAttribute(
@@ -133,10 +133,10 @@ const Navbar = () => {
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
           <div className="ohio">
-            <img className="h-9 w-9 blured-bg" alt="UV_modified" src="/iceberg.png" />
-            <img className="h-9 w-9 item" alt="UV_modified" src="/iceberg.png" />
+            <img className="h-11 w-11 blured-bg" alt="Underneath" src="/iceberg.png" />
+            <img className="h-11 w-11 item" alt="Underneath" src="/iceberg.png" />
           </div>
-            <span className="text-card-foreground"><strong>UV_modified</strong></span>
+            <span className="text-card-foreground"><strong>Underneath</strong></span>
           </a>
           <nav className="flex items-center gap-6 text-sm">
             <Sheet open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
@@ -317,7 +317,7 @@ const Navbar = () => {
                     <h1 className="text-card-foreground">Settings</h1>
                   </DialogTitle>
                   <DialogDescription>
-                    Settings to change the behavior of UV_modified.
+                    Settings to change the behavior of Underneath.
                   </DialogDescription>
                 </DialogHeader>
                 <Separator />
