@@ -132,9 +132,10 @@ const Navbar = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href={`/`}>
+          <div className="ohio">
             <img className="h-6 w-6 blured-bg" alt="UV_modified" src="/iceberg.png" />
             <img className="h-6 w-6 item" alt="UV_modified" src="/iceberg.png" />
-
+          </div>
             <span className="text-card-foreground"><strong>UV_modified</strong></span>
           </a>
           <nav className="flex items-center gap-6 text-sm">

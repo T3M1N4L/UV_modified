@@ -42,4 +42,17 @@ body {
 
 .blured-bg {
   filter: blur(13px);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item {
+  z-index:100;
+  grid-column: 1;
+  grid-row: 1;
+}
+.ohio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
