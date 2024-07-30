@@ -39,7 +39,7 @@ font-family: 'Fira Code', sans-serif;
 body {
   @apply bg-black
 }
-#gallery,
+
 .item,
 .blured-bg,
 .blured-bg > img {
@@ -47,14 +47,9 @@ body {
   width: 50vw;
 }
 
-#gallery {
-  position: relative;
-}
-
 .blured-bg {
   filter: blur(13px);
 }
-
 
 .item {
   padding: 5px;
