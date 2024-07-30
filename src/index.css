@@ -42,10 +42,12 @@ body {
 
 .blured-bg {
   filter: blur(13px);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .item {
-  padding: 5px;
   position: absolute;
   top: 0;
   left: 0;
