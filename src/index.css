@@ -41,7 +41,7 @@ body {
 }
 
 .blured-bg {
-  filter: blur(5px);
+  filter: blur(3px);
   grid-column: 1;
   grid-row: 1;
 }
