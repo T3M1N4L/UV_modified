@@ -1,7 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
+//@ts-ignore
+import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
+import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import path from "path";
 const __dirname = path.resolve();
 // https://vitejs.dev/config/
@@ -11,8 +15,23 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
+          src: `${uvPath}/**/*`.replace(/\\/g, "/"),
+          dest: "uv",
+          overwrite: false
+        },
+        {
+          src: `${baremuxPath}/**/*`.replace(/\\/g, "/"),
+          dest: "baremux",
+          overwrite: false
+        },
+        {
           src: `${libcurlPath}/**/*`.replace(/\\/g, "/"),
           dest: "libcurl",
+          overwrite: false
+        },
+        {
+          src: `${epoxyPath}/**/*`.replace(/\\/g, "/"),
+          dest: "epoxy",
           overwrite: false
         },
       ]

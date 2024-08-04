@@ -1,14 +1,24 @@
 import { useEffect } from "react";
-import { SetTransport } from "@mercuryworkshop/bare-mux";
+
+import { BareMuxConnection } from "@mercuryworkshop/bare-mux"
+import { useSettingsStore } from "../stores";
+declare global {
+  interface Window { Connection: BareMuxConnection }
+}
 
 const useSw = (path: string) => {
+  const settingsStore = useSettingsStore();
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.ready.then(() => {
-        SetTransport("CurlMod.LibcurlClient", { wisp: "wss://nebulaproxy.io/wisp/" });
+        const connection = new BareMuxConnection("/baremux/worker.js")
+        window.Connection = connection
+        connection.setTransport(settingsStore.transport.path,[ {
+          wisp: "wss://nebulaproxy.io/wisp"
+        }]);
       })
       navigator.serviceWorker
-      .register(path)
+        .register(path)
         .then(
           function (registration) {
             console.log(
