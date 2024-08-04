@@ -14,7 +14,7 @@ const useSw = (path: string) => {
         const connection = new BareMuxConnection("/baremux/worker.js")
         window.Connection = connection
         connection.setTransport(settingsStore.transport.path,[ {
-          wisp: "wss://nebulaproxy.io/wisp"
+          wisp: "wss://nebulaproxy.io/wisp/"
         }]);
       })
       navigator.serviceWorker
