@@ -220,7 +220,8 @@ inject: async (url) => {
                   });
           </script>
           <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/duckduckgo.js"></script>
-           <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/mf-adblock.js"></script>  
+           <script src="https://raw.githubusercontent.com/T3M1N4L/UV_modified/main/public/usershiz/mf-adblock.js"></script>
+           <scritp>alert('test');</script>
         `;
   }
   if (url.host === "yewtu.be") {
